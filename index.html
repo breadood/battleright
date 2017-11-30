@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Battleright.gg</title>
+</head>
+<body>
+	<main>
+		
+	</main>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/vue"></script>
+
+	<script>
+		$.ajax({
+			url: 'https://api.dc01.gamelockerapp.com/shards/global/matches',
+			dataType: 'json',
+			type: 'GET',
+			beforeSend: function(xhr) {
+				xhr.setRequestHeader("Authorization", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlNjRjNDllMC1iNjgwLTAxMzUtNjVlZi0wYTU4NjQ2MGFhYzQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNTExODgzODUwLCJwdWIiOiJzdHVubG9jay1zdHVkaW9zIiwidGl0bGUiOiJiYXR0bGVyaXRlIiwiYXBwIjoiYmF0dGxlcmlnaHQtMGU3NTRlMTAtYzJiNy00OTk3LWI1NDQtNzI0YzUxYmQ5ZGIyIiwic2NvcGUiOiJjb21tdW5pdHkiLCJsaW1pdCI6MTB9.hR6WUKt0uZLbKZDspkGOuNGLOPznk19m5Muv2DXliRo");
+				xhr.setRequestHeader("Accept", "application/vnd.api+json");
+			}
+		}).done(function(data) {
+			console.log(data);
+		})
+	</script>
+</body>
+</html>
