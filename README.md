@@ -1,1 +1,3 @@
-battleright
+Battleright
+
+# Battle it Right
